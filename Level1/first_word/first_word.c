@@ -3,24 +3,22 @@
 void first_word(char *str)
 {
 	int i;
-	int first;
-	first = 0;
+
 	i = 0;
 	while (str[i] != '\0')
 	{
 		if (str[i] == '\t' || str[i] == ' ')
 			i++;
-		else if(first == 0)
+		else
 		{
-				write(1, &str[i], 1);
-				i++;
-				if (str[i] == '\t' || str[i] == ' ')
-					return ;
-				else
-					first = 0;
+			write(1, &str[i], 1);
+			i++;
+			if (str[i] == '\t' || str[i] == ' ')
+				return ;
 		}
 	}
 }
+
 
 int main (int a, char **b)
 {
@@ -30,7 +28,3 @@ int main (int a, char **b)
 
 	return (0);
 }
-
-
-
-
