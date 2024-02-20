@@ -1,12 +1,12 @@
 #include <stdlib.h>
 
-int	*ft_range(int start, int end)
+int	*ft_rrange(int start, int end)
 {
-	int *ptr;
-	int len;
+	int	*ptr;
 	int i;
+	int len;
 
-	if(end >= start)
+	if (end >= start)
 		len = end - start + 1;
 	else
 		len = start - end + 1;
@@ -18,14 +18,14 @@ int	*ft_range(int start, int end)
 	{
 		if (start < end)
 		{
-			ptr[i] = start;
-			start++;
+			ptr[i] = end;
+			end--;
 			i++;
 		}
 		else
 		{
-			ptr[i] = start;
-			start--;
+			ptr[i] = end;
+			end++;
 			i++;
 		}
 	}
