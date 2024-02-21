@@ -43,3 +43,15 @@ int ft_atoi_base(const char *str, int str_base)
 	}
 	return (result * sign);
 }
+
+#include <stdio.h>
+
+int main(void)
+{
+	printf("%d\n", ft_atoi_base("1A", 16));
+	printf("%d\n", ft_atoi_base("AA", 16));
+	printf("%d\n", ft_atoi_base("AAAA", 16));
+	printf("%d", ft_atoi_base("a", 16));
+
+	return (0);
+}

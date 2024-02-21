@@ -12,3 +12,11 @@ void print_bits(unsigned char octet)
 		write(1, &bit, 1);
 	}
 }
+
+int main(void)
+{
+	print_bits(2);
+	print_bits(4);
+
+	return (0);
+}

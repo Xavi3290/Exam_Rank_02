@@ -31,3 +31,21 @@ int	*ft_range(int start, int end)
 	}
 	return (ptr);
 }
+
+#include <stdio.h>
+
+int main(void)
+{
+	int i;
+
+	i = 0;
+	int *ptr = ft_range(2,-1);
+	int len = 2 - (-1) + 1;
+	while(i < len)
+	{
+		printf("%d", ptr[i]);
+		i++;
+	}
+
+	return (0);
+}

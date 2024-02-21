@@ -19,3 +19,14 @@ size_t	ft_strcspn(const char *s, const char *reject)
 	}
 	return (i);
 }
+
+#include <string.h>
+#include <stdio.h>
+
+int main(void)
+{
+	printf("%zu", strcspn("hola", "kikula"));
+	printf("%zu", ft_strcspn("hola", "kikula"));
+
+	return (0);
+}

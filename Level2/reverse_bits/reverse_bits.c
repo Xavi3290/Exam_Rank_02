@@ -13,3 +13,12 @@ unsigned char reverse_bits(unsigned char octet)
 	}
 	return (res);
 }
+
+#include <stdio.h>
+
+int main(void)
+{
+	printf("%u", reverse_bits(2));
+
+	return (0);
+}

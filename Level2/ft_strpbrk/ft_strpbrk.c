@@ -19,3 +19,18 @@ char	*ft_strpbrk(const char *s1, const char *s2)
 	}
 	return (0);
 }
+
+#include <string.h>
+#include <stdio.h>
+
+int main(void)
+{
+	printf("%s\n", strpbrk("holaaart", "adeu"));
+	printf("%s\n", ft_strpbrk("holaaart", "adeu"));
+	printf("%s\n", strpbrk("paco", "adeu"));
+	printf("%s\n", ft_strpbrk("paco", "adeu"));
+	printf("%s\n", strpbrk(NULL, "adeu"));
+	printf("%s\n", ft_strpbrk(NULL, "adeu"));
+
+	return (0);
+}
