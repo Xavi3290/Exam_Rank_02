@@ -1,6 +1,7 @@
+#include <unistd.h>
 #include <stdlib.h>
 
-char	*ft_strncpy(char *s1, char *s2, int n)
+char *ft_strncpy(char *s1, char *s2, int n)
 {
 	int i;
 
@@ -11,10 +12,11 @@ char	*ft_strncpy(char *s1, char *s2, int n)
 		i++;
 	}
 	s1[i] = '\0';
+
 	return (s1);
 }
 
-char	**ft_split(char *str)
+char **ft_split(char *str)
 {
 	int i;
 	int j;
@@ -45,24 +47,40 @@ char	**ft_split(char *str)
 	return (out);
 }
 
-#include <stdio.h>
+int ft_splitlen(char **str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
 
 int main(int a, char **b)
 {
 	if (a == 2)
 	{
-		int i;
-		char **str;
+		char	**str;
+		int		len;
+		int 	i;
 
-		i = 0;
 		str = ft_split(b[1]);
-		while(str[i])
+		len = ft_splitlen(str) - 1;
+		while (len >= 0)
 		{
-			printf("%s\n", str[i]);
-			i++;
+			i = 0;
+			while (str[len][i])
+			{
+				write(1, &str[len][i], 1);
+				i++;
+			}
+			len--;
+			if (len >= 0)
+			   write(1, " ", 1);
 		}
 	}
-
+	write(1, "\n", 1);
 
 	return (0);
 }
