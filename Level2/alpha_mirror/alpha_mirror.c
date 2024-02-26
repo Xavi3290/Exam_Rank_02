@@ -11,9 +11,9 @@ int main(int a, char **b)
 		while (b[1][i] != '\0')
 		{
 			if (b[1][i] >= 'a' && b[1][i] <= 'z')
-				c = 122 - b[1][i] + 97;
+				c = 'z' - b[1][i] + 'a';
 			else if (b[1][i] >= 'A' && b[1][i] <= 'Z')
-				c = 90 - b[1][i] + 65;
+				c = 'Z' - b[1][i] + 'A';
 			else
 				c = b[1][i];
 			write(1, &c, 1);
