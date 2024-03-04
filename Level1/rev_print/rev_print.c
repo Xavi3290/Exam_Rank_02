@@ -20,6 +20,7 @@ void rev_print(char *str)
 	int len;
 
 	len = ft_strlen(str);
+	len--;
 	while(len >= 0)
 	{
 		ft_putchar(str[len]);
