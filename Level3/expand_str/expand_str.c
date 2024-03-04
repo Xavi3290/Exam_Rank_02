@@ -19,6 +19,7 @@ int main(int a, char **b)
 			{
 				if (bol)
 					write(1, "   ", 3);
+				bol = 0;				
 				write(1, &b[1][i], 1);
 			}
 			i++;
