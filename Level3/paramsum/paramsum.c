@@ -12,9 +12,6 @@ void ft_putnbr(int num)
 
 int main(int a, char **b)
 {
-	char *c;
-
-	c = b[1];
 	ft_putnbr(a - 1);
 
 	write(1, "\n", 1);
